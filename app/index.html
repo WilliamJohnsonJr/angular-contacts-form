@@ -9,7 +9,28 @@
   </head>
   <body ng-app="app">
     <div class="container" ng-controller="Controller">
-      
+      <div class="formPadding">
+        <div class="formContainer">
+          <div class="formHeader">
+            Contact Us
+          </div>
+          <form>
+            <div class="nameInput">Name <br>
+              <input type="text" class = "formInput" placeholder="Sally Smith">
+            </div>
+            <div class="emailInput">Email <br>
+              <input type="text" class = "formInput" placeholder="ssmith@gmail.com">
+            </div>
+            <div class="websiteInput">Website <br>
+              <input type="text" class = "formInput" placeholder="http://mssmith.com">
+            </div>
+            <div class="messageInput">Message <br>
+              <textarea rows="5" cols="40" class = "formInput" placeholder="A friendly message..."></textarea>
+            </div>
+            <button ng-click="submitForm()" class="submitButton">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="js/bundle.js"></script>
   </body>
