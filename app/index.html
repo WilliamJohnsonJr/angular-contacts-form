@@ -43,7 +43,7 @@
           </form>
         </div>
         <ul class="commentsContainer">
-          <li class="comment" ng-repeat="c in comments">
+          <li class="comment" ng-repeat="c in comments" data-id="{{c.id}}">
             <div class="commentID">
               {{ c.id }}
             </div>
@@ -59,6 +59,8 @@
             <div class="commentMessage">
               {{ c.message }}
             </div>
+            <button class="deleteButton" ng-click="deleteComment(c.id)">
+            </button>
           </li>
         </ul>
       </div>
