@@ -17,15 +17,27 @@
           <form>
             <div class="nameInput">Name <br>
               <input type="text" class = "formInput" placeholder="Sally Smith" ng-model="name">
+              <div class="error">
+                {{ errors.nameError }}
+              </div>
             </div>
             <div class="emailInput">Email <br>
               <input type="text" class = "formInput" placeholder="ssmith@gmail.com" ng-model="email">
+              <div class="error">
+                {{ errors.emailError }}
+              </div>
             </div>
             <div class="websiteInput">Website <br>
               <input type="text" class = "formInput" placeholder="http://mssmith.com" ng-model="website">
+              <div class="error">
+                {{ errors.websiteError }}
+              </div>
             </div>
             <div class="messageInput">Message <br>
               <textarea rows="5" cols="40" class = "formInput" placeholder="A friendly message..." ng-model="message"></textarea>
+              <div class="error">
+                {{ errors.messageError }}
+              </div>
             </div>
             <button ng-click="submitForm(name, email, website, message)" class="submitButton">Submit</button>
           </form>
