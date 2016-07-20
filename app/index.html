@@ -16,20 +16,39 @@
           </div>
           <form>
             <div class="nameInput">Name <br>
-              <input type="text" class = "formInput" placeholder="Sally Smith">
+              <input type="text" class = "formInput" placeholder="Sally Smith" ng-model="name">
             </div>
             <div class="emailInput">Email <br>
-              <input type="text" class = "formInput" placeholder="ssmith@gmail.com">
+              <input type="text" class = "formInput" placeholder="ssmith@gmail.com" ng-model="email">
             </div>
             <div class="websiteInput">Website <br>
-              <input type="text" class = "formInput" placeholder="http://mssmith.com">
+              <input type="text" class = "formInput" placeholder="http://mssmith.com" ng-model="website">
             </div>
             <div class="messageInput">Message <br>
-              <textarea rows="5" cols="40" class = "formInput" placeholder="A friendly message..."></textarea>
+              <textarea rows="5" cols="40" class = "formInput" placeholder="A friendly message..." ng-model="message"></textarea>
             </div>
-            <button ng-click="submitForm()" class="submitButton">Submit</button>
+            <button ng-click="submitForm(name, email, website, message)" class="submitButton">Submit</button>
           </form>
         </div>
+        <ul class="commentsContainer">
+          <li class="comment" ng-repeat="c in comments">
+            <div class="commentID">
+              {{ c.id }}
+            </div>
+            <div class="commentName">
+              {{ c.name }}
+            </div>
+            <div class="commentEmail">
+              {{ c.email }}
+            </div>
+            <div class="commentWebsite">
+              {{ c.website }}
+            </div>
+            <div class="commentMessage">
+              {{ c.message }}
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
     <script src="js/bundle.js"></script>
