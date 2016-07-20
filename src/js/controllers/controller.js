@@ -10,7 +10,7 @@ function Controller ($scope) {
 	$scope.submitForm = function (name, email, website, message){
 		if(name !== undefined){
 			if(email !== undefined && email.includes('@')){
-				if(website !== undefined && website.includes('http://')){
+				if(website !== undefined && website.substring(0,7) ==='http://'){
 					if(message !== undefined) {
 						let newComment = {
 							id: "Comment " + ($scope.comments.length + 1),
